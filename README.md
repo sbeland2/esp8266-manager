@@ -1,7 +1,7 @@
 #esp8266-manager
 Everything you need to manage the esp8266, from hardware to server software.
 
-Server side
+<h1>Server side</h1>
 
 Login page<br>
 <img src="http://sbelandiot.com/github/IOT Login.png"><br><br>
