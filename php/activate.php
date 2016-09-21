@@ -17,7 +17,7 @@ $email = trim ($email);
 include 'serverinfo.php';
 
 $fn = $IotPath.$iot.".txt";		
-$fn2 = $IotPath.$iot."pending.txt";
+$fn2 = $IotPath.$iot.".pending.txt";
 $fn3 = $IotPath.$email.".txt";
 
 if (file_exists ($fn2))
