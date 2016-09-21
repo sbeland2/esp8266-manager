@@ -16,9 +16,9 @@ Edit Module page<br>
 
 Activation link<br>
 <img src="http://sbelandiot.com/github/emailactivate.jpg"><br>
-New Account with new device
+New Account with new device<br>
 <img src="http://sbelandiot.com/github/newaccount.jpg"><br>
-Account with new device
+Account with new device<br>
 <img src="http://sbelandiot.com/github/newdevice.jpg"><br>
 How it look on server using FileZilla<br>
 <img src="http://sbelandiot.com/github/fz.jpg"><br>
