@@ -6,8 +6,8 @@ Only 2 files to modify:
 
 1. serverinfo.php
       .$MaxNbOfEmailServer = 2; // the number of items in the $ServerEmail array
-      // type your emails to be used to send email, they are going to act as smtp server, so the more you have, the more you can 
-      // send email from your server (gmail use 99 emails/day as limitations)
+      // type your emails to be used to send email, they are going to act as smtp server, so the more you have
+      // the more you can send email from your server (gmail use 99 emails/day as limitations)
       .$ServerEmail = array ("sbelandiot@gmail.com", "sbelandiot2@gmail.com"); 
       // next is the password for all these emails, try to use the same password for all OR 
       // make a new array of password and modify the code in session.php to support an array of password
@@ -21,7 +21,8 @@ Only 2 files to modify:
 </pre>
 <br>
 This webserver is compatible with any phone size!<br><br>
-I made the background color black for all the website, I hate white background and still don't understand why it is being used everywhere...damaging your eyes, polluting the planet, and so on...<br><br>
+I made the background color black for all the website, I hate white background and still don't understand why it is 
+being used everywhere...damaging your eyes, polluting the planet, and so on...<br><br>
 
 <h1>Server side</h1>
 
