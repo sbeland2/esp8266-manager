@@ -1,7 +1,7 @@
 #esp8266-manager
-Everything you need to manage the esp8266, from hardware to server software.<br>
-No need to understand tons of thing about server or arduino, just connect your esp8266 through usb serial and you are done. No need to read a bible before running it, just copy all the files and follow instructions, you should be up and running in few minutes, with all this, you own and control your own web server with your own devices and can help other people to manage their devices as well with your server.<br>
-This webserver is compatible with any phone size!<br>
+Everything you need to manage the esp8266, from hardware to server software.<br><br>
+No need to understand tons of thing about server or arduino, just connect your esp8266 through usb serial and you are done. No need to read a bible before running it, just copy all the files and follow instructions, you should be up and running in few minutes, with all this, you own and control your own web server with your own devices and can help other people to manage their devices as well with your server.<br><br>
+This webserver is compatible with any phone size!<br><br>
 I made the background color black for all the website, I hate white background and still don't understand why it is being used everywhere...damaging your eyes, polluting the planet, and so on...<br><br>
 
 <h1>Server side</h1>
