@@ -1,5 +1,18 @@
-1. Upload all files to your root directory of your server
-2. Create the <iot> folder under your root directory
-3. Just go on your server, you should see the login page (login.php)
-4. If you connect a device to it, you should an email with an activation link
-5. If you don't have an account, as soon as you connect a device to your server, it will create your account
+Installing
+
+. Upload all php/html files to your root directory of your server
+. Create the <iot> folder under your root directory
+. Edit serverinfo.php and make your changes, don't forget to set your email password there
+. Browse to your server, you should see the login page (login.php)
+. If you connect a device to it, you should receive an email with an activation link
+. If you don't have an account, as soon as you connect a device to your server, it will create your account
+  you will be notified by email
+. If you have an account, just login in based on the credentials you saw when you activate your first device.
+  
+Connecting a device
+. When the device enter in Access Point mode (AP), you have to connect to it like any router or hotspot
+. You must type 192.168.4.1 in a browser, then the device should show you a list of wifi point
+. You select one and type in the password and your email address
+. These information will be saved in the eeprom of the device if it succeed
+. If your server is running with the php files, then just check your email, 
+  everything should be easy from this point.
