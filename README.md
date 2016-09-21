@@ -29,6 +29,8 @@ How it look on server using FileZilla<br>
 <img src="http://sbelandiot.com/github/fz.jpg"><br>
 
 <h1>Communication Device (Esp) <==> Server</h1>
+This is the output of the serial monitor window in Arduino IDE.<br>
+<par>
 Chip ID: 608121
 EspName: ESPINO-94779
 
@@ -108,3 +110,4 @@ Closing connection
 WiFi Disconnect  // when we don't do communication with server, no need to keep this on, it used energy and ressources
 Going in WaitForSensor mode now
 
+</par>
