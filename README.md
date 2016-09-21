@@ -21,12 +21,16 @@ Here is all about emails received and activation link.<br><br>
 
 Activation link, once your device connect to a wifi somewhere, it will connect to your server and send an activation link by email.<br>
 <img src="http://sbelandiot.com/github/emailactivate.jpg"><br>
+Once you click on the link, it bring you to the following page if it is a new account (new email)<br>
+If it is not a new account, then it bring you to the next image (Account with new device)<br>
 New Account with new device, if your user doesn't have an account, it is created automatically with the new device.<br>
 <img src="http://sbelandiot.com/github/newaccount.jpg"><br>
 Account with new device, when the user have an account, the device is added<br>
 <img src="http://sbelandiot.com/github/newdevice3.jpg"><br>
 How it look on server using FileZilla<br>
 <img src="http://sbelandiot.com/github/fz.jpg"><br>
+Once it is activated, the device itself will send you an email that look like this<br>
+<img src="http://sbelandiot.com/github/started.jpg"><br>
 
 <h1>Communication Device (Esp) <==> Server</h1>
 This is the output of the serial monitor window in Arduino IDE.<br>
