@@ -24,7 +24,7 @@ Activation link, once your device connect to a wifi somewhere, it will connect t
 New Account with new device, if your user doesn't have an account, it is created automatically with the new device.<br>
 <img src="http://sbelandiot.com/github/newaccount.jpg"><br>
 Account with new device, when the user have an account, the device is added<br>
-<img src="http://sbelandiot.com/github/newdevice.jpg"><br>
+<img src="http://sbelandiot.com/github/newdevice3.jpg"><br>
 How it look on server using FileZilla<br>
 <img src="http://sbelandiot.com/github/fz.jpg"><br>
 
