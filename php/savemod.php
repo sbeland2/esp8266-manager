@@ -54,7 +54,7 @@
 	else $pw = $mi ['pw'];
 
 	$fn = $IotPath.$mod.".txt";	
-	$f = fopen($fn, "w");
+	$f = CreateFile ($fn);	
 	if ($f)
 	{
 		$pw = trim ($pw);

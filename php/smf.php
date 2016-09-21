@@ -27,7 +27,7 @@ $post = "\nYou can control your module by login on the following link:\n";
 $post .= "http://$servername/login.php?email=$mailto\n\n";
 $post .= "Thank you!\n";
 
-$ret = SendEmail ($email, $subject, $body.$post);
+$ret = SendEmail ($email, $subject, $body.$post, 0);
 
 if ($ret)
 	echo "Mai1~S3nt"; 

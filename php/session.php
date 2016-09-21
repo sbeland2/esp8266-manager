@@ -117,8 +117,8 @@ function PutMailServerNumber ($buf)
 	include 'serverinfo.php';
 		
 	$fn = $IotPath."mailservernumber.txt";	
-		
-	$f = fopen($fn, "w");
+			
+	$f = CreateFile ($fn);
 	if ($f)
 	{		
 		if (flock($f, LOCK_EX)) 
@@ -134,7 +134,7 @@ function SaveSessionInfo ($email)
 {	
 	include 'serverinfo.php';
 		
-	$f = fopen($IotSessionPath, "w");
+	$f = CreateFile ($IotSessionPath);
 	if ($f)
 	{
 		$clientinfo = GetClientInfo ();
@@ -165,7 +165,7 @@ function DeleteSession ($email)
 	if (!file_exists ($IotSessionPath))
 		return;
 
-	$f = fopen($IotSessionPath, "w");
+	$f = CreateFile ($IotSessionPath);
 	fclose ($f);
 	unlink ($IotSessionPath);
 }
@@ -218,6 +218,15 @@ if (strlen ($fn) > 0)
 */
 
 	return ($mail->Send ());
+}
+
+function CreateFile ($fn)
+{
+	$f = fopen($fn, "w");
+	if (!$f)
+		return 0;	
+	chmod ($fn, 0640);
+	return $f;
 }
 
 ?>

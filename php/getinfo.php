@@ -33,7 +33,7 @@ if (!file_exists ($fn))
 {	
 	$f = 0;
 	if ($create == "1" || !file_exists ($fn2))		
-		$f = fopen ($fn2, "w");
+		$f = CreateFile ($fn2);		
 	if ($f)
 	{		
 		fwrite ($f, "&email=");

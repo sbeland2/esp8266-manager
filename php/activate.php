@@ -1,5 +1,7 @@
 <?php
 
+include 'session.php';	
+
 $servername = $_SERVER['HTTP_HOST'];
 
 $enc = $_GET ["iot"];
@@ -27,9 +29,9 @@ if (file_exists ($fn2))
 	
 	if (!file_exists ($fn3))
 	{
-		$f = fopen($fn3, "w");
+		$f = CreateFile ($fn3);		
 		if ($f)
-		{
+		{			
 			$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 			$pw = substr (str_shuffle ($chars), 0, 8);					
 			fwrite ($f, "&pw=".$pw);

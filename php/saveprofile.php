@@ -34,7 +34,7 @@
 	}
 	else $pw = $ui ['pw'];
 
-	$f = fopen($IotEmailPath, "w");
+	$f = CreateFile ($IotEmailPath);
 	if ($f)
 	{
 		$pw = trim ($pw);
