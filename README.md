@@ -54,8 +54,7 @@ Connecting to: sbelandiot.com<br>
 Request: getinfo.php?<br>
 Port: 80<br>
 <br>
-/********** as you can see on next line, everything is encrypted using base64 *********/<br>
-Data: create=1&iot=RVNQSU5PLTk0Nzc5&email=c2JlbGFuZEBnbWFpbC5jb20=&modpw=YWRtaW4xMjM=<br>
+Data: create=1&iot=RVNQSU5PLTk0Nzc5&email=c2JlbGFuZEBnbWFpbC5jb20=&modpw=YWRtaW4xMjM= <== encrypted using base64<br>
 HTTP/1.1 200 OK<br>
 Date: Wed, 21 Sep 2016 15:28:05 GMT<br>
 Server: Apache<br>
