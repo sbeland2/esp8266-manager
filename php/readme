@@ -1,0 +1,5 @@
+1. Upload all files to your root directory of your server
+2. Create the <iot> folder under your root directory
+3. Just go on your server, you should see the login page (login.php)
+4. If you connect a device to it, you should an email with an activation link
+5. If you don't have an account, as soon as you connect a device to your server, it will create your account
