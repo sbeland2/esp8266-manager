@@ -1,0 +1,87 @@
+.myButton {
+ width:auto;
+ height:auto;
+ text-align:center; 
+ margin-bottom: 4px;    
+ background-color:#4285F4;
+ border:2px solid #124d77;
+ display:inline-block;
+ cursor:pointer;
+ color:white;
+ font-family:Arial;
+ font-size:16px;
+ padding:4px 4px;
+ text-decoration:none;
+ font-weight:bold; 
+}
+
+.myButton:hover {
+ 
+ background-color:Aqua;
+ color:black;
+}
+
+.divider{
+    width:5px;
+    height:auto;   
+}
+
+body {
+ background-color:black;
+}
+
+.mytext {
+ margin-bottom: 4px;  
+ line-height: 200%; 
+ padding:2px 2px;
+ border:4px solid darkred;
+ background-color:black;
+ color:white;
+}
+
+.importantText {
+ margin-bottom: 4px;  
+ line-height: 200%; 
+ padding:2px 2px;
+ border:4px solid black;
+ background-color:darkred;
+ color:yellow;
+}
+
+ul.a {
+ list-style-type: none;
+ align:left;
+}
+
+.myButton:active {
+ position:relative;
+ top:1px;
+}
+
+.moduleButton {
+	width:250px;
+}
+
+.myButtonLogout {
+	background-color:darkred;			
+}
+
+.myButtonLogout:hover {
+ background-color:Red;
+ color:white;
+}
+
+ul.a {
+ list-style-type: none;
+ align:left;
+}
+
+.myButton:active {
+ position:relative;
+ top:1px;
+}
+
+body {
+background-color: black;
+color: Silver;
+}
