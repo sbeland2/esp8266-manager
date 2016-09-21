@@ -1,9 +1,10 @@
 #esp8266-manager
 Everything you need to manage the esp8266, from hardware to server software.<br><br>
 No need to understand tons of thing about server or arduino, just connect your esp8266 through usb serial and you are done. No need to read a bible before running it, just copy all the files and make few changes, you should be up and running in few minutes, with all this, you own and control your own web server with your own devices and can help other people to manage their devices as well with your server.<br><br>
-Only 2 files to modify:<br>
 <p>
-1. serverinfo.php<br>
+Only 2 files to modify:
+
+1. serverinfo.php
       .$MaxNbOfEmailServer = 2; // the number of items in the $ServerEmail array<br>
       // type your emails to be used to send email, they are going to act as smtp server, so the more you have, the more you can <br>
       // send email from your server (gmail use 99 emails/day as limitations)<br>
