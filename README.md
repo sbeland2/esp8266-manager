@@ -5,21 +5,21 @@ No need to understand tons of thing about server or arduino, just connect your e
 Only 2 files to modify:
 
 1. serverinfo.php
-      .$MaxNbOfEmailServer = 2; // the number of items in the $ServerEmail array<br>
-      // type your emails to be used to send email, they are going to act as smtp server, so the more you have, the more you can <br>
-      // send email from your server (gmail use 99 emails/day as limitations)<br>
-      .$ServerEmail = array ("sbelandiot@gmail.com", "sbelandiot2@gmail.com"); <br>
-      // next is the password for all these emails, try to use the same password for all OR <br>
-      // make a new array of password and modify the code in session.php to support an array of password<br>
-      .$ServerEmailPw = "xxxxxxx"; // set to all email address the same pw or make an array that match ServerEmail array<br>
-      .$ServerFromName = "Serge Beland"; // whatever name you want to be seen when people receive email from your server<br>
-<br>
-2. espmanager.ino<br>
-      .ServerHost = "sbelandiot.com"; // where your php/html files are hosted, everything must be under the root directory<br>
-      .in Loop function, add your own code to do whatever under the case STATE_WAIT_FOR_SENSOR<br>
-      .in the future, i will add my own code to monitor motion detection and camera<br>
+      .$MaxNbOfEmailServer = 2; // the number of items in the $ServerEmail array
+      // type your emails to be used to send email, they are going to act as smtp server, so the more you have, the more you can 
+      // send email from your server (gmail use 99 emails/day as limitations)
+      .$ServerEmail = array ("sbelandiot@gmail.com", "sbelandiot2@gmail.com"); 
+      // next is the password for all these emails, try to use the same password for all OR 
+      // make a new array of password and modify the code in session.php to support an array of password
+      .$ServerEmailPw = "xxxxxxx"; // set to all email address the same pw or make an array that match ServerEmail array
+      .$ServerFromName = "Serge Beland"; // whatever name you want to be seen when people receive email from your server
+
+2. espmanager.ino
+      .ServerHost = "sbelandiot.com"; // where your php/html files are hosted, everything must be under the root directory
+      .in Loop function, add your own code to do whatever under the case STATE_WAIT_FOR_SENSOR
+      .in the future, i will add my own code to monitor motion detection and camera
 </pre>
-<br><br>
+<br>
 This webserver is compatible with any phone size!<br><br>
 I made the background color black for all the website, I hate white background and still don't understand why it is being used everywhere...damaging your eyes, polluting the planet, and so on...<br><br>
 
@@ -53,83 +53,80 @@ Once it is activated, the device itself will send you an email that look like th
 
 <h1>Communication Device (Esp) <==> Server</h1>
 This is the output of the serial monitor window in Arduino IDE.<br>
-<par>
-Chip ID: 608121<br>
-EspName: ESPINO-94779<br>
-<br>
-EEPROM INFO READED<br>
-SSID: Laguna1 A 1<br>
-SsidPassword: xxxxxx <== here you should see your ssid password, but i hide it<br>
-ESP Password: admin123<br>
-Email: sbeland@gmail.com<br>
-<br>
-Trying to connect to wifi with:<br>
-Ssid: Laguna1 A 1<br>
-Password: xxxxxx <== here you should see your ssid password, but i hide it<br>
-.......<br>
-<br>
-WiFi connected to: Laguna1 A 1<br>
-with password: xxxxxx <== here you should see your ssid password, but i hide it<br>
-IP address: 192.168.103.35<br>
-<br>
-Get Request<br>
-Connecting to: sbelandiot.com<br>
-Request: getinfo.php?<br>
-Port: 80<br>
-<br>
-Data: create=1&iot=RVNQSU5PLTk0Nzc5&email=c2JlbGFuZEBnbWFpbC5jb20=&modpw=YWRtaW4xMjM= <== encrypted using base64<br>
-HTTP/1.1 200 OK<br>
-Date: Wed, 21 Sep 2016 15:28:05 GMT<br>
-Server: Apache<br>
-X-Powered-By: PHP/5.4.43<br>
-Transfer-Encoding: chunked<br>
-Content-Type: text/html<br>
-Connection: close<br>
-<br>
-3b<br>
-&email=sbeland@gmail.com<br>
-&pw=admin123<br>
-&nick=nickname&Inf0<br>
-<br>
-*** GotAnswer: &Inf0 ***  <== Inf0 with a zero 0, not the letter o or O<br>
-<br>
-&nick=nickname&Inf0<br>
-<br>
-0<br>
-<br>
-<br>
-Closing connection<br>
-Inf0 return in mem: <br>
-&nick=nickname&Inf0<br>
-Going to: STATE_SEND_MAIL_STARTED<br>
-<br>
-Post Request<br>
-Connecting to: sbelandiot.com<br>
-Request: smf.php<br>
-Port: 80<br>
-Data: c2JlbGFuZEBnbWFpbC5jb20=!#RVNQSU5PLTk0Nzc5OiBTdGFydGVkIQ==!#SW5mbyBmcm9tIHdlYiBzZXJ2ZXIgaGFzIGJlZW4gcmVhZGVkDQpNb2R1bGUgdXBkYXR<br>lZCENCg==<br>
-<br>
-Waiting for answer: Mai1~S3nt<br>
-<br>
-HTTP/1.1 200 OK<br>
-Date: Wed, 21 Sep 2016 15:28:11 GMT<br>
-Server: Apache<br>
-X-Powered-By: PHP/5.4.43<br>
-Transfer-Encoding: chunked<br>
-Content-Type: text/html<br>
-Connection: close<br>
-<br>
-9<br>
-Mai1~S3nt<br>
-GotAnswer: Mai1~S3nt  <== Mai1~S3nt with the number 1, not the letter L, and number 3 as letter e<br>
-<br>
-Mai1~S3nt<br>
-<br>
-0<br>
-<br>
-<br>
-Closing connection<br>
-WiFi Disconnect  // when we don't do communication with server, no need to keep this on, it used energy and ressources<br>
-Going in WaitForSensor mode now<br>
-<br>
-</par>
+<pre>
+Chip ID: 608121
+EspName: ESPINO-94779
+
+EEPROM INFO READED
+SSID: Laguna1 A 1
+SsidPassword: xxxxxx <== here you should see your ssid password, but i hide it
+ESP Password: admin123
+Email: sbeland@gmail.com
+
+Trying to connect to wifi with:
+Ssid: Laguna1 A 1
+Password: xxxxxx <== here you should see your ssid password, but i hide it
+.......
+
+WiFi connected to: Laguna1 A 1
+with password: xxxxxx <== here you should see your ssid password, but i hide it
+IP address: 192.168.103.35
+
+Get Request
+Connecting to: sbelandiot.com
+Request: getinfo.php?
+Port: 80
+
+Data: create=1&iot=RVNQSU5PLTk0Nzc5&email=c2JlbGFuZEBnbWFpbC5jb20=&modpw=YWRtaW4xMjM= <== encrypted using base64
+HTTP/1.1 200 OK
+Date: Wed, 21 Sep 2016 15:28:05 GMT
+Server: Apache
+X-Powered-By: PHP/5.4.43
+Transfer-Encoding: chunked
+Content-Type: text/html
+Connection: close
+
+3b
+&email=sbeland@gmail.com
+&pw=admin123
+&nick=nickname&Inf0
+
+*** GotAnswer: &Inf0 ***  <== Inf0 with a zero 0, not the letter o or O
+
+&nick=nickname&Inf0
+
+Closing connection
+Inf0 return in mem: 
+&nick=nickname&Inf0
+Going to: STATE_SEND_MAIL_STARTED
+
+Post Request
+Connecting to: sbelandiot.com
+Request: smf.php
+Port: 80
+Data: c2JlbGFuZEBnbWFpbC5jb20=!#RVNQSU5PLTk0Nzc5OiBTdGFydGVkIQ==!#SW5mbyBmcm9tIHdlYiBzZXJ2ZXIgaGFzIGJlZW4gcmVhZGVkDQpNb2R1bGUgdXBkYXRlZCENCg==
+
+Waiting for answer: Mai1~S3nt
+
+HTTP/1.1 200 OK
+Date: Wed, 21 Sep 2016 15:28:11 GMT
+Server: Apache
+X-Powered-By: PHP/5.4.43
+Transfer-Encoding: chunked
+Content-Type: text/html
+Connection: close
+
+9
+Mai1~S3nt
+GotAnswer: Mai1~S3nt  <== Mai1~S3nt with the number 1, not the letter L, and number 3 as letter e
+
+Mai1~S3nt
+
+0
+
+
+Closing connection
+WiFi Disconnect  // when we don't do communication with server, no need to keep this on, it used energy and ressources
+Going in WaitForSensor mode now
+
+</pre>
