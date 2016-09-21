@@ -6,16 +6,19 @@ Only 2 files to modify:
 
 1. serverinfo.php
       .$MaxNbOfEmailServer = 2; // the number of items in the $ServerEmail array
-      // type your emails to be used to send email, they are going to act as smtp server, so the more you have
-      // the more you can send email from your server (gmail use 99 emails/day as limitations)
+       // type your emails to be used to send email, they are going to act as smtp server, so the more you have
+       // the more you can send email from your server (gmail use 99 emails/day as limitations)
       .$ServerEmail = array ("sbelandiot@gmail.com", "sbelandiot2@gmail.com"); 
-      // next is the password for all these emails, try to use the same password for all OR 
-      // make a new array of password and modify the code in session.php to support an array of password
-      .$ServerEmailPw = "xxxxxxx"; // set to all email address the same pw or make an array that match ServerEmail array
-      .$ServerFromName = "Serge Beland"; // whatever name you want to be seen when people receive email from your server
+       // next is the password for all these emails, try to use the same password for all OR 
+       // make a new array of password and modify the code in session.php to support an array of password
+      .$ServerEmailPw = "xxxxxxx"; // set to all email address the same pw or make an array that match 
+       // ServerEmail array
+      .$ServerFromName = "Serge Beland"; // whatever name you want to be seen when people receive email 
+       // from your server
 
 2. espmanager.ino
-      .ServerHost = "sbelandiot.com"; // where your php/html files are hosted, everything must be under the root directory
+      .ServerHost = "sbelandiot.com"; // where your php/html files are hosted, everything must be 
+       // under the root directory
       .in Loop function, add your own code to do whatever under the case STATE_WAIT_FOR_SENSOR
       .in the future, i will add my own code to monitor motion detection and camera
 </pre>
