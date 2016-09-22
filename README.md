@@ -1,8 +1,8 @@
 #esp8266-manager
 Everything you need to manage the esp8266, from hardware to server software.<br><br>
 No need to understand tons of thing about server or arduino, just connect your esp8266 through usb serial and you are done. No need to read a bible before running it, just copy all the files and make few changes, you should be up and running in few minutes, with all this, you own and control your own web server with your own devices and can help other people to manage their devices as well with your server.<br><br>
-<Php> directory contains all the files needed to be on your root directory of your server.<br>
-And <espmanager.ino> is the code source to be run in Arduino IDE.  Of course, you must connect your <esp> to your computer with a usb-serial cable.<br>
+Php directory contains all the files needed to be on your root directory of your server.<br>
+And 'espmanager.ino' is the code source to be run in Arduino IDE.  Of course, you must connect your <esp> to your computer with a usb-serial cable.<br>
 <pre>
 Only 2 files to modify:
 
