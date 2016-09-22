@@ -1,29 +1,33 @@
 #esp8266-manager
 Everything you need to manage the esp8266, from hardware to server software.<br><br>
 No need to understand tons of thing about server or arduino, just connect your esp8266 through usb serial and you are done. No need to read a bible before running it, just copy all the files and make few changes, you should be up and running in few minutes, with all this, you own and control your own web server with your own devices and can help other people to manage their devices as well with your server.<br><br>
-Php directory contains all the files needed to be on your root directory of your server.<br>
-And 'espmanager.ino' is the code source to be run in Arduino IDE.  Of course, you must connect your <esp> to your computer with a usb-serial cable.<br>
+<b>Php directory</b> contains all the files needed to be on your root directory of your server.<br>
+And <b>'espmanager.ino'</b> is the code source to be run in Arduino IDE.  Of course, you must connect your <esp> to your computer with a usb-serial cable.<br>
 <pre>
 Only 2 files to modify:
 
-1. serverinfo.php
-      .$MaxNbOfEmailServer = 2; // the number of items in the $ServerEmail array
+1. serverinfo.php (4 variables to modify)
+       // the number of items in the $ServerEmail array
+      .$MaxNbOfEmailServer = 2; 
+
        // type your emails to be used to send email, they are going to act as smtp server, so the more you have
        // the more you can send email from your server (gmail use 99 emails/day as limitations)
       .$ServerEmail = array ("sbelandiot@gmail.com", "sbelandiot2@gmail.com"); 
+      
        // next is the password for all these emails, try to use the same password for all OR 
        // make a new array of password and modify the code in session.php to support an array of password
-      .$ServerEmailPw = "xxxxxxx"; // set to all email address the same pw or make an array that match 
-       // ServerEmail array
-      .$ServerFromName = "Serge Beland"; // whatever name you want to be seen when people receive email 
-       // from your server
+      .$ServerEmailPw = "xxxxxxx"; 
+       
+       // whatever name you want to be seen when people receive email from your server
+      .$ServerFromName = "Serge Beland"; 
 
-2. espmanager.ino
-      .ServerHost = "sbelandiot.com"; // where your php/html files are hosted, everything must be 
-       // under the root directory
+2. espmanager.ino (1 variable to modify)
+       // where your php/html files are hosted, everything must be under the root directory
+      .ServerHost = "sbelandiot.com"; 
       .in Loop function, add your own code to do whatever under the case STATE_WAIT_FOR_SENSOR
       .in the future, i will add my own code to monitor motion detection and camera
 </pre>
+
 <br>
 This webserver is compatible with any phone size!<br><br>
 I made the background color black for all the website, I hate white background and still don't understand why it is 
