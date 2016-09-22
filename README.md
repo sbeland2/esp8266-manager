@@ -6,7 +6,7 @@ And <b>'espmanager.ino'</b> is the code source to be run in Arduino IDE.  Of cou
 <pre>
 Only 2 files to modify:
 
-1. serverinfo.php (4 variables to modify)
+1. <b>serverinfo.php</b> (4 variables to modify)
        // the number of items in the $ServerEmail array
       .$MaxNbOfEmailServer = 2; 
 
@@ -21,7 +21,7 @@ Only 2 files to modify:
        // whatever name you want to be seen when people receive email from your server
       .$ServerFromName = "Serge Beland"; 
 
-2. espmanager.ino (1 variable to modify)
+2. <b>espmanager.ino</b> (1 variable to modify)
        // where your php/html files are hosted, everything must be under the root directory
       .ServerHost = "sbelandiot.com"; 
       .in Loop function, add your own code to do whatever under the case STATE_WAIT_FOR_SENSOR
